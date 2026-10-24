@@ -7,6 +7,14 @@ edition = "2024"
 name = "8zip"
 path = "src/main.rs"
 
+[lints.rust]
+elided_lifetimes_in_paths = "allow"
+rust_2018_idioms = { priority = -1, level = "deny" }
+
+[lints.clippy]
+module_inception = "allow"
+uninlined_format_args = "allow"
+
 [dependencies]
 anyhow = "1.0.100"
 clap = { version = "4.5.54", features = ["derive"] }
