@@ -104,7 +104,7 @@ fn extract_zip<R: Read + Seek>(
 
     let outpath = output.join(&stripped_path);
 
-    if file.name().ends_with('/') {
+    if file.name()?.ends_with('/') {
       // Create directory
       fs::create_dir_all(&outpath).context(format!("Failed to create directory: {:?}", outpath))?;
     } else {
