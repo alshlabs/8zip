@@ -6,6 +6,7 @@ mod decompress_tar_xz;
 mod decompress_zip;
 mod input_target;
 mod platform;
+mod upgrade;
 
 use std::path::PathBuf;
 
@@ -86,6 +87,8 @@ enum CommandType {
     #[arg(long = "path")]
     path: Option<PathBuf>,
   },
+  /// Update the binary to the latest release
+  Upgrade(upgrade::UpgradeCommand),
 }
 
 fn main() -> anyhow::Result<()> {
@@ -180,5 +183,6 @@ fn main() -> anyhow::Result<()> {
       ),
       _ => Err(anyhow::anyhow!("Unable to detect extension")),
     },
+    CommandType::Upgrade(args) => upgrade::main(&args),
   }
 }
