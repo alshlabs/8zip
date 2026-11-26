@@ -16,16 +16,16 @@ module_inception = "allow"
 uninlined_format_args = "allow"
 
 [dependencies]
-anyhow = "1.0.104"
-clap = { version = "4.6.7", features = ["derive"] }
+anyhow = "1.0.105"
+clap = { version = "4.6.10", features = ["derive"] }
 flate2 = { version = "1.1.11", features = ["rust_backend"] }
 gzp = { version = "2.0.4", features = ["flate2"] }
-normalize-path = "0.2.2"
+normalize-path = "0.2.3"
 num_cpus = "1.17.0"
 tar = "0.4.46"
-walkdir = "2.5.0"
+walkdir = "2.5.1"
 xz2 = "0.1.7"
-zip = "9.5.1"
+zip = "9.8.2"
 
 [profile.release]
 opt-level = 3
