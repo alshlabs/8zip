@@ -25,7 +25,7 @@ num_cpus = "1.17.0"
 tar = "0.4.46"
 walkdir = "2.5.1"
 xz2 = "0.1.7"
-zip = "9.8.2"
+zip = "9.9.0"
 
 [profile.release]
 opt-level = 3
